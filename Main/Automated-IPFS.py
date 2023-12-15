@@ -53,7 +53,7 @@ def send_hash_to_contract(web3, contract_address, account, private_key, ipfs_has
     return txn_hash
 
 def main():
-    file_path = '' # Replace with the file you want to upload
+    file_path = 'REPLACE_ME' # Replace with the file you want to upload
     check_interval = 5 # Time in seconds to wait between checks
     old_hash = get_file_hash(file_path) if os.path.exists(file_path) else None 
 
@@ -66,10 +66,10 @@ def main():
                 cid = upload_to_ipfs(file_path)
                 print(f'File uploaded to IPFS with CID: {cid}')
 
-                web3 = Web3(Web3.HTTPProvider('REPLACE_ME'))  # Replace with your node provider
+                web3 = Web3(Web3.HTTPProvider('REPLACE_ME'))  # Replace with your node provider (Probably Infura)
                 contract_address = Web3.to_checksum_address('REPLACE_ME') # Replace with your contract address
                 account = 'REPLACE_ME'  # Replace with your account address
-                private_key = 'REPLACE_ME_WARNING'  # DO NOT USE A MAINNET FOR THIS TRANSACTION, replace this with your private key
+                private_key = 'REPLACE_ME'  # DO NOT USE A MAINNET FOR THIS TRANSACTION, replace this with your private key
                 ipfs_hash = cid
 
                 txn_hash = send_hash_to_contract(web3, contract_address, account, private_key, cid)

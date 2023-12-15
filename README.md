@@ -41,7 +41,7 @@ This project contains Python scripts that demonstrate the integration of blockch
 
 1. Publish the cidHasher.sol script to the blockchain using EVM Version paris, and Injected Provider you can do this very easily by using https://remix.ethereum.org/ Please make sure that you are using the Fuji Testnet in your Web3 wallet.
 
-2. Update the `file_path`, `web3`, `contract_address`, `account`, `private_key`, `save_path`, `address` in the scripts with your specific details.
+2. Update the `file_path`, `web3`, `contract_address`, `account`, `private_key`, `save_path`, `address` in the scripts with your specific details. Be sure to include the file extension (.txt .xlsx) in the `file_path`
 
 3. To start monitoring for transactions, run:
 
@@ -54,6 +54,8 @@ This project contains Python scripts that demonstrate the integration of blockch
    ```
    python3 Automated-Grab.py
    ```
+
+5. In the script's current form if an HTTP request times out, you will need to edit the file again so another attempt can be made.
 
 ## Configuration
 
