@@ -67,7 +67,7 @@ def main():
                 print(f'File uploaded to IPFS with CID: {cid}')
 
                 web3 = Web3(Web3.HTTPProvider('REPLACE_ME'))  # Replace with your node provider
-                contract_address = Web3.to_checksum_address('0x04DfC26144932AFE6B093C7801c50a421BfDb6C8') # Optional replace
+                contract_address = Web3.to_checksum_address('REPLACE_ME') # Replace with your contract address
                 account = 'REPLACE_ME'  # Replace with your account address
                 private_key = 'REPLACE_ME_WARNING'  # DO NOT USE A MAINNET FOR THIS TRANSACTION, replace this with your private key
                 ipfs_hash = cid

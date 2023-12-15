@@ -1,12 +1,12 @@
-# Project Title: Ethereum and IPFS Integration Script
+# Project Title: IPFS Automation and Retrieval
 
 ## Description
 
-This project contains Python scripts that demonstrate the integration of Ethereum blockchain and IPFS (InterPlanetary File System). It includes functionality to monitor Ethereum blockchain transactions for a specific address, decode transaction input to extract an IPFS CID (Content Identifier), and download the corresponding file from IPFS.
+This project contains Python scripts that demonstrate the integration of blockchain and IPFS (InterPlanetary File System). It includes functionality to monitor the Fuji blockchain transactions for a specific address, decode transaction input to extract an IPFS CID (Content Identifier), and download the corresponding file from IPFS. It also provides the Solidity script for deploying the CID hash to the blockchain.
 
 ## Features
 
-- **Monitor Ethereum Transactions**: Watches for new transactions involving a specified Ethereum address.
+- **Monitor Blockchain Transactions**: Watches for new transactions involving a specified address.
 - **Decode Transaction Input**: Extracts and decodes the `input` field from transactions to find an IPFS CID.
 - **Download from IPFS**: Downloads files from IPFS using the extracted CID.
 
@@ -22,16 +22,16 @@ This project contains Python scripts that demonstrate the integration of Ethereu
 1. Clone the repository:
 
    ```bash
-   git clone https://your-repository-url
+   git clone http://Automated-IPFS-Retrieval
    ```
 
-2. Navigate to the project directory:
+   2. Navigate to the project directory:
 
    ```bash
-   cd path-to-your-project
+   cd Automated-IPFS-Retrieval/
    ```
 
-3. Install required Python packages:
+2. Install required Python packages:
 
    ```bash
    pip install -r requirements.txt
@@ -39,21 +39,27 @@ This project contains Python scripts that demonstrate the integration of Ethereu
 
 ## Usage
 
-1. Update the `rpc_url`, `address`, and other placeholders in the scripts with your specific details.
+1. Publish the cidHasher.sol script to the blockchain using EVM Version paris, and Injected Provider you can do this very easily by using https://remix.ethereum.org/ Please make sure that you are using the Fuji Testnet in your Web3 wallet.
 
-2. To start monitoring Ethereum transactions, run:
+2. Update the `file_path`, `web3`, `contract_address`, `account`, `private_key`, `save_path`, `address` in the scripts with your specific details.
+
+3. To start monitoring for transactions, run:
 
    ```bash
-   python script_name.py
+   python3 Automated-IPFS.py
    ```
 
-   Replace `script_name.py` with the name of the script you wish to run.
+4. To start monitoring for new CIDs posted to the blockchain, run:
+
+   ```
+   python3 Automated-Grab.py
+   ```
 
 ## Configuration
 
 - **Ethereum Node**: Set the `rpc_url` in the script to point to your Ethereum node or Infura endpoint.
-- **Monitored Address**: Change the `address` variable to the Ethereum address you want to monitor.
-- **IPFS Gateway**: The default IPFS gateway is set to `https://ipfs.io/ipfs/`. You can change it in the `download_file_from_ipfs` function.
+- **Monitored Address**: Change the `address` variable to the Fuji address you want to monitor.
+- **IPFS Gateway**: The default IPFS gateway is set to `https://gateway.pinata.cloud/ipfs/`. You can change it in the `download_file_from_ipfs` function.
 
 ## Contributing
 

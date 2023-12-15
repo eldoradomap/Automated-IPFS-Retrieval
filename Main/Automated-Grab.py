@@ -93,7 +93,7 @@ def monitor_address_transactions(rpc_url, address, interval=10):
         time.sleep(interval)
 
 rpc_url = 'https://api.avax-test.network/ext/bc/C/rpc' 
-address = '0x04DfC26144932AFE6B093C7801c50a421BfDb6C8' # Optional replace
+address = 'REPLACE_ME' # Replace with your contract address
 monitor_interval = 1
 
 monitor_address_transactions(rpc_url, address, monitor_interval)
