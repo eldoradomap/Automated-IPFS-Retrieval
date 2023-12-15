@@ -22,7 +22,7 @@ This project contains Python scripts that demonstrate the integration of blockch
 1. Clone the repository:
 
    ```bash
-   git clone http://Automated-IPFS-Retrieval
+   gh repo clone eldoradomap/Automated-IPFS-Retrieval
    ```
 
    2. Navigate to the project directory:
